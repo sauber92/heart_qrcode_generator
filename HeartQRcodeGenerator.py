@@ -14,7 +14,7 @@ def GenerateQR(name, postfix):
     # Generate QR Code
     url = 'https://wedding-for-junyoung-bomin-20230715.github.io/?name=' + name.encode('utf-8').decode('unicode_escape') + '&postfix=' + postfix.encode('utf-8').decode('unicode_escape')
     qr = pyqrcode.create(url)
-    qr.png('./tmp/tmp.png', scale=6, module_color=[0x4c, 0x49, 0x48, 0xff], background=[0xff, 0xff, 0xff])  # R76/G73/B72
+    qr.png('./tmp/tmp.png', scale=6, module_color=[0x4c, 0x49, 0x48, 0xff], background=[0xff, 0xff, 0xff, 0x00])  # R76/G73/B72
     
     # get an image
     with Image.open('./tmp/tmp.png').convert('RGBA') as img:
